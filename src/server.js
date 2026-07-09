@@ -1,6 +1,9 @@
 require("dotenv").config()
 const app = require("./app");
 const pool = require("./database/connection");
+
+
+
 async function iniciarServidor(){
     try{
         await pool.query("SELECT NOW()")

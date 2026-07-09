@@ -1,0 +1,48 @@
+const authServicio = require("../services/auth.service");
+const bcrypt = require("bcrypt");
+const jwt = require("jsonwebtoken");
+
+async function login(req,res){
+    const usuario = req.body.usuario;
+    const password = req.body.password;
+    const usuarioBD=await authServicio.obtenerUsuario(usuario);
+
+    console.log(usuarioBD);
+
+    if(!usuarioBD){
+        return res.status(404).json({
+            mensaje: "Usuario no encontrado"
+        })
+    }
+    const passwordCorrecta =  await bcrypt.compare(
+        password,
+        usuarioBD.password
+    );
+    if (!passwordCorrecta){
+        return res.status(401).json({
+            mensaje: "Contraseña incorrecta"
+        })
+    }
+        
+    const token = jwt.sign(
+        {
+            usuario: usuarioBD.usuario
+        },
+        process.env.JWT_SECRET,
+        {
+            expiresIn: "24h"
+        }
+
+    )
+    res.status(200).json({
+        token
+     })
+            
+}
+
+    
+
+
+module.exports = {
+    login
+};

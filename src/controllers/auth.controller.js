@@ -2,7 +2,8 @@ const authServicio = require("../services/auth.service");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 
-async function login(req,res){
+async function login(req,res,next){
+    try{
     const usuario = req.body.usuario;
     const password = req.body.password;
     const usuarioBD=await authServicio.obtenerUsuario(usuario);
@@ -37,12 +38,23 @@ async function login(req,res){
     res.status(200).json({
         token
      })
+     }catch(err){
+        next(err);
+     }
             
+}
+async function me(req,res,next){
+    try{
+        res.json(req.usuario);
+    }catch(err){
+        next(err);
+    }
 }
 
     
 
 
 module.exports = {
-    login
+    login,
+    me
 };

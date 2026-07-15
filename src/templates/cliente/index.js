@@ -5,22 +5,22 @@ const plantillaCAT = require("./cat.template");
 
 const idiomas = {
     es: {
-        asunto: "Hemos recibido tu solicitud de reserva",
+        asunto: "Hemos recibido tu solicitud de reserva. Confirmación pendiente",
         plantilla: plantillaES
     },
 
     en: {
-        asunto: "We have received your reservation request",
+        asunto: "We have received your reservation request. To be confirmed",
         plantilla: plantillaEN
     },
 
     fr: {
-        asunto: "Nous avons reçu votre demande de réservation",
+        asunto: "Nous avons reçu votre demande de réservation. À confirmer",
         plantilla: plantillaFR
     },
 
     cat: {
-        asunto: "Hem rebut la teva sol·licitud de reserva",
+        asunto: "Hem rebut la teva sol·licitud de reserva. Confirmació pendent",
         plantilla: plantillaCAT
     }
 };

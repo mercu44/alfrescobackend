@@ -85,13 +85,9 @@ function generarCorreoClienteCAT({nombre,fecha,hora,personas}){
 
                             </table>
 
-                            <p style="margin:35px 0 20px;font-size:17px;color:#555;line-height:1.8;">
-                                El nostre equip revisarà la disponibilitat i es posarà en contacte amb tu tan aviat com sigui possible per confirmar la reserva.
-                            </p>
-
-                            <p style="margin:0;font-size:17px;color:#555;line-height:1.8;">
-                                Si necessites modificar alguna dada o tens qualsevol consulta, pots respondre directament aquest correu o trucar-nos al <strong>+34 938 94 06 00</strong>.
-                            </p>
+                            <b style="margin:35px 0 20px;font-size:17px;color:#555;line-height:1.8;"> El nostre equip confirmarà ben aviat la disponibilitat. </b> 
+                            <p> Si l’hora que prefereixes no està disponible, t’enviarem altres opcions. Tingues en compte que comencem els sopars a partir de les 19 h, de manera que respondrem les sol·licituds rebudes després de les 18.30 l’endemà al matí. </p> 
+                            <p style="margin:0;font-size:17px;color:#555;line-height:1.8;"> Si necessites modificar qualsevol dada o tens alguna consulta, pots respondre directament a aquest correu o enviar un WhatsApp al <strong>+34 723838527</strong>. </p>
 
                             <table
                                 role="presentation"

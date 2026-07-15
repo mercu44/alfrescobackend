@@ -29,9 +29,9 @@ async function editarPlato(nombreAntiguo, idioma,nombre, descripcion, precio, or
         `
         UPDATE carta
         set
-            nombre = COALESCE($3, nombre) 
-            descripcion= COALESCE($4, descripcion)
-            precio= COALESCE($5, precio)
+            nombre = COALESCE($3, nombre) ,
+            descripcion= COALESCE($4, descripcion),
+            precio= COALESCE($5, precio),
             orden= COALESCE($6, orden)
         WHERE nombre = $1 and idioma = $2
         RETURNING *;

@@ -85,13 +85,20 @@ function generarCorreoClienteEN({nombre,fecha,hora,personas}){
 
                             </table>
 
-                            <p style="margin:35px 0 20px;font-size:17px;color:#555;line-height:1.8;">
-                                Our team will check availability and contact you as soon as possible to confirm your reservation.
+                        
+                            <b style="margin:35px 0 20px;font-size:17px;color:#555;line-height:1.8;">
+                                Our team will confirm availability shortly.
+                            </b>
+
+                            <p>
+                                If your preferred time is not available, we will send you alternative options. Please note that dinner service starts at 7:00 pm, so requests received after 6:30 pm will be answered the following morning.
                             </p>
 
                             <p style="margin:0;font-size:17px;color:#555;line-height:1.8;">
-                                If you need to modify any details or have any questions, you can reply directly to this email or call us at <strong>+34 938 94 06 00</strong>.
+                                If you need to modify any details or have any questions, you can reply directly to this email or send a WhatsApp message to <strong>+34 723838527</strong>.
                             </p>
+
+
 
                             <table
                                 role="presentation"

@@ -4,7 +4,7 @@ const localMiddleware = require("../middlewares/local.middleware");
 const router = express.Router();
 
 
-router.post("/gestionarCorreo", localMiddleware, emailController.gestionarCorreo);
+router.post("/gestionarCorreo", emailController.gestionarCorreo); // implentado
 
 
 module.exports = router;

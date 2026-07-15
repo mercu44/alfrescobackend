@@ -4,10 +4,19 @@ const authRoutes = require("./routes/auth.routes");
 const calendarioRoutes = require("./routes/calendario.routes")
 const emailRoutes = require("./routes/email.routes");
 const errorMiddleware = require("./middlewares/error.middleware");
-
+const cors = require("cors");
 
 
 const app= express();
+app.use((req, res, next) => {
+    console.log(req.method, req.url);
+    next();
+});
+app.use(
+    cors({
+        origin: true
+    })
+);
 
 app.use(express.json());
 

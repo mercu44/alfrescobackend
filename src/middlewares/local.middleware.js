@@ -1,5 +1,5 @@
 
-const cors = require("cors");
+/*const cors = require("cors");
 
 const frontendOnly = cors({
     origin: [
@@ -11,3 +11,4 @@ const frontendOnly = cors({
 });
 
 module.exports = frontendOnly;
+*/

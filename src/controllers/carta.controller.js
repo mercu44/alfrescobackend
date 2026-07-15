@@ -56,6 +56,16 @@ async function editarPlato(req,res,next){
             precio= null,
             orden=null
         } = req.body;
+        nombre = nombre || null;
+        descripcion = descripcion || null;
+
+        precio = precio === ""
+            ? null
+            : Number(precio);
+
+        orden = orden === ""
+            ? null
+            : Number(orden);
         const plato = await cartaServicio.editarPlato(nombreAntiguo,idioma,nombre,descripcion,precio,orden);
         res.status(200).json(plato);}catch(err){
         next(err);

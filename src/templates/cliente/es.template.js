@@ -32,7 +32,7 @@ function generarCorreoClienteES({nombre,fecha,hora,personas}){
                             <td style="padding:35px 28px;">
 
                                 <h2 style="margin:0 0 30px;font-size:34px;font-weight:300;color:#222;text-align:center;line-height:1.2;">
-                                    Hemos recibido tu solicitud
+                                    Hemos recibido tu solicitud.
                                 </h2>
 
                                 <p style="font-size:17px;color:#555;line-height:1.8;margin:0 0 20px;">
@@ -40,7 +40,7 @@ function generarCorreoClienteES({nombre,fecha,hora,personas}){
                                 </p>
 
                                 <p style="font-size:17px;color:#555;line-height:1.8;margin:0 0 30px;">
-                                    Gracias por confiar en <strong>Restaurante Alfresco</strong>.
+                                    Gracias por solicitar una mesa en <strong>Restaurante Alfresco</strong>.
                                     Hemos recibido correctamente tu solicitud de reserva con los siguientes datos:
                                 </p>
 
@@ -85,12 +85,12 @@ function generarCorreoClienteES({nombre,fecha,hora,personas}){
 
                                 </table>
 
-                                <p style="margin:35px 0 20px;font-size:17px;color:#555;line-height:1.8;">
-                                    Nuestro equipo revisará la disponibilidad y se pondrá en contacto contigo lo antes posible para confirmar la reserva.
-                                </p>
-
+                                <b style="margin:35px 0 20px;font-size:17px;color:#555;line-height:1.8;">
+                                    Nuestro equipo confirmará en breve la disponibilidad.
+                                </b>
+                                <p>Si la hora que prefieres no esta disponible, le enviaremos otras opciones. Te en cuenta que comenzamos las cenas a partir de las 19h, por lo que responderemos las solicitudes recibidas después de las 18.30 a la mañana siguiente.</p>
                                 <p style="margin:0;font-size:17px;color:#555;line-height:1.8;">
-                                    Si necesitas modificar cualquier dato o tienes alguna consulta, puedes responder directamente a este correo o llamarnos al <strong>938 94 06 00</strong>.
+                                    Si necesitas modificar cualquier dato o tienes alguna consulta, puedes responder directamente a este correo o mandar un whatsapp al <strong>+34 723838527</str>.
                                 </p>
 
                                 <table

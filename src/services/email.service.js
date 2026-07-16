@@ -8,7 +8,7 @@ async function enviarCorreo(destinatario, asunto, html) {
 
     return await resend.emails.send({
 
-        from: "onboarding@resend.dev",
+        from: "alfresco@alfrescorestaurante.es",
 
         to: destinatario,
 

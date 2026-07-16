@@ -90,7 +90,7 @@ function generarCorreoClienteES({nombre,fecha,hora,personas}){
                                 </b>
                                 <p style="margin:0;font-size:17px;color:#555;line-height:1.3;">Si la hora que prefieres no está disponible, te enviaremos otras opciones. Ten en cuenta que las cenas comienzan a partir de las 19:00 h, por lo que responderemos a las solicitudes recibidas después de las 18:30 h a la mañana siguiente.</p>
                                 <p style="margin:0;font-size:17px;color:#555;line-height:1.3;">
-                                    Si necesitas modificar cualquier dato o tienes alguna consulta, puedes responder directamente a este correo o mandar un whatsapp al <strong>+34 723838527</str>.
+                                    Si necesitas modificar cualquier dato o tienes alguna consulta, puedes responder directamente a este correo o mandar un whatsapp al <strong>+34 722838527.</str>.
                                 </p>
 
                                 <table

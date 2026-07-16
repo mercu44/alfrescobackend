@@ -95,7 +95,7 @@ function generarCorreoClienteEN({nombre,fecha,hora,personas}){
                             </p>
 
                             <p style="margin:0;font-size:17px;color:#555;line-height:1.8;">
-                                If you need to modify any details or have any questions, you can reply directly to this email or send a WhatsApp message to <strong>+34 723838527</strong>.
+                                If you need to modify any details or have any questions, you can reply directly to this email or send a WhatsApp message to <strong>+34 722838527.</strong>.
                             </p>
 
 

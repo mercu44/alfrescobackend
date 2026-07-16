@@ -87,7 +87,7 @@ function generarCorreoClienteCAT({nombre,fecha,hora,personas}){
 
                             <b style="margin:35px 0 20px;font-size:17px;color:#555;line-height:1.8;"> El nostre equip confirmarà ben aviat la disponibilitat. </b> 
                             <p style="margin:0;font-size:17px;color:#555;line-height:1.3;"> Si l’hora que prefereixes no està disponible, t’enviarem altres opcions. Tingues en compte que comencem els sopars a partir de les 19 h, de manera que respondrem les sol·licituds rebudes després de les 18.30 l’endemà al matí. </p> 
-                            <p style="margin:0;font-size:17px;color:#555;line-height:1.3;"> Si necessites modificar qualsevol dada o tens alguna consulta, pots respondre directament a aquest correu o enviar un WhatsApp al <strong>+34 722838527.</strong>. </p>
+                            <p style="margin:0;font-size:17px;color:#555;line-height:1.3;"> Si necessites modificar qualsevol dada o tens alguna consulta, pots respondre directament a aquest correu o enviar un WhatsApp al <strong>+34 722838527</strong>. </p>
 
                             <table
                                 role="presentation"

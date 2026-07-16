@@ -94,8 +94,8 @@ function generarCorreoClienteFR({nombre,fecha,hora,personas}){
                                 Si l’heure que vous préférez n’est pas disponible, nous vous proposerons d’autres options. Veuillez noter que le service du dîner commence à partir de 19 h ; les demandes reçues après 18 h 30 seront donc traitées le lendemain matin.
                             </p>
 
-                            <p style="margin:0;font-size:17px;color:#555;line-height:1.8;">
-                                Si vous souhaitez modifier des informations ou si vous avez des questions, vous pouvez répondre directement à cet e-mail ou envoyer un message WhatsApp au <strong>+34 722838527.</strong>.
+                            <p style="margin:0;font-size:17px;color:#555;line-height:1.3;">
+                                Si vous souhaitez modifier des informations ou si vous avez des questions, vous pouvez répondre directement à cet e-mail ou envoyer un message WhatsApp au <strong>+34 722838527</strong>.
                             </p>
 
 

@@ -94,8 +94,8 @@ function generarCorreoClienteEN({nombre,fecha,hora,personas}){
                                 If your preferred time is not available, we will send you alternative options. Please note that dinner service starts at 7:00 pm, so requests received after 6:30 pm will be answered the following morning.
                             </p>
 
-                            <p style="margin:0;font-size:17px;color:#555;line-height:1.8;">
-                                If you need to modify any details or have any questions, you can reply directly to this email or send a WhatsApp message to <strong>+34 722838527.</strong>.
+                            <p style="margin:0;font-size:17px;color:#555;line-height:1.3;">
+                                If you need to modify any details or have any questions, you can reply directly to this email or send a WhatsApp message to <strong>+34 722838527</strong>.
                             </p>
 
 

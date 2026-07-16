@@ -55,7 +55,7 @@ async function addHora(req,res,next){
         next(err);
     }
 }
-async function addMultiplesHora(req,res,next){
+async function addMultiplesHoras(req,res,next){
     try{
         const fecha = req.body.fecha;
         const horaInicio = req.body.horaInicio;

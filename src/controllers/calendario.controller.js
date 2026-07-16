@@ -60,8 +60,10 @@ async function eliminarFecha(req,res,next){
 
         const fecha = req.body.fecha;
         const resultado = await calendarioServicio.eliminarFecha(fecha);
+        console.log("Resultado:", resultado);
         res.status(200).json(resultado);
     }catch(err){
+        console.log("ERROR:", err);
         next(err);
     }
 }

@@ -15,7 +15,7 @@ async function gestionarCorreo(req,res,next){
             idioma
         } = req.body;
         const restaurante = await emailService.enviarCorreo(
-            "albertoblascoo@gmail.com",
+            "alfresco@alfrescorestaurante.es",
             "Nueva solicitud de reserva de "+ nombre,
             `
             <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#f5f5f5;font-family:Arial,Helvetica,sans-serif;">

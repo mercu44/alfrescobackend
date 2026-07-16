@@ -10,6 +10,8 @@ router.get("/disponibilidad/dias", calendarioController.obtenerDias); //implemen
 
 router.post("/addFecha", authMiddleware, calendarioController.addFecha);
 router.post("/addHora", authMiddleware, calendarioController.addHora);
+router.post("/addMultiplesHoras", authMiddleware, calendarioController.addMultiplesHoras);
+
 router.delete("/eliminarFecha", authMiddleware, calendarioController.eliminarFecha);
 router.delete("/eliminarHora", authMiddleware,  calendarioController.eliminarHora);
 

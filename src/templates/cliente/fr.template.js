@@ -90,7 +90,7 @@ function generarCorreoClienteFR({nombre,fecha,hora,personas}){
                                 Notre équipe vous confirmera la disponibilité dans les plus brefs délais.
                             </b>
 
-                            <p>
+                            <p style="margin:0;font-size:17px;color:#555;line-height:1.3;">
                                 Si l’heure que vous préférez n’est pas disponible, nous vous proposerons d’autres options. Veuillez noter que le service du dîner commence à partir de 19 h ; les demandes reçues après 18 h 30 seront donc traitées le lendemain matin.
                             </p>
 

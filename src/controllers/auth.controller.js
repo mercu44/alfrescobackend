@@ -8,7 +8,6 @@ async function login(req,res,next){
     const password = req.body.password;
     const usuarioBD=await authServicio.obtenerUsuario(usuario);
 
-    console.log(usuarioBD);
 
     if(!usuarioBD){
         return res.status(404).json({

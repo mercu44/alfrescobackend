@@ -56,11 +56,8 @@ async function addHora(req,res,next){
 }
 async function eliminarFecha(req,res,next){
     try{
-        console.log(req.body);
-
         const fecha = req.body.fecha;
         const resultado = await calendarioServicio.eliminarFecha(fecha);
-        console.log("Resultado:", resultado);
         res.status(200).json(resultado);
     }catch(err){
         console.log("ERROR:", err);
@@ -69,7 +66,6 @@ async function eliminarFecha(req,res,next){
 }
 async function eliminarHora(req,res,next){
     try{
-        console.log(req.body);
         const fecha = req.body.fecha;
         const hora = req.body.hora;
 

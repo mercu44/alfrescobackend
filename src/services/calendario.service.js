@@ -64,7 +64,6 @@ async function eliminarFecha(fecha){
         RETURNING *
         `, [fecha]
     )
-     console.log(resultado.rows);
     return resultado.rows[0];
 }
 async function eliminarHora(fecha,hora){
@@ -75,7 +74,6 @@ async function eliminarHora(fecha,hora){
         RETURNING *
         `, [fecha, hora]
     )
-     console.log(resultado.rows);
     return resultado.rows[0];
 }
 

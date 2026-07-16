@@ -50,7 +50,7 @@ async function editarPlato(req,res,next){
     try{
         const nombreAntiguo = req.params.nombre;
         const idioma = req.params.idioma;
-        const {
+        let {
             nombre = null,
             descripcion= null,
             precio= null,

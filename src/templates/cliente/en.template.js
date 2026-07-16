@@ -90,7 +90,7 @@ function generarCorreoClienteEN({nombre,fecha,hora,personas}){
                                 Our team will confirm availability shortly.
                             </b>
 
-                            <p>
+                            <p style="margin:0;font-size:17px;color:#555;line-height:1.3;">
                                 If your preferred time is not available, we will send you alternative options. Please note that dinner service starts at 7:00 pm, so requests received after 6:30 pm will be answered the following morning.
                             </p>
 

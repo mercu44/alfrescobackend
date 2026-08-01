@@ -63,6 +63,16 @@ function generarCorreoClienteFR({nombre,fecha,hora,personas}){
                                     </td>
                                 </tr>
 
+                            <tr>
+                                <td>
+                                    <strong>Personas</strong>
+                                </td>
+
+                                <td>
+                                    ${personas}
+                                </td>
+                            </tr>
+
                                 <tr>
                                     <td>
                                         <strong>Heure</strong>

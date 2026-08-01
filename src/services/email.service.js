@@ -6,18 +6,16 @@ const resend = new Resend(
 
 async function enviarCorreo(destinatario, asunto, html) {
 
-    return await resend.emails.send({
-
+    const resultado = await resend.emails.send({
         from: "alfresco@alfrescorestaurante.es",
-
         to: destinatario,
-
         subject: asunto,
-
         html: html
-
     });
-
+    if (resultado.error){
+        throw new Error(resultado.error.message);
+    }
+    return resultado.data;
 }
 
 module.exports = {

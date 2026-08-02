@@ -3,7 +3,7 @@ const reservasService = require("../services/reservas.service");
 
 async function obtenerReservas(req,res,next){
     try{
-        const estado = req.body.estado;
+        const estado = req.query.estado;
         const reservas = await reservasService.obtenerReservas(estado);
         let reservasYCliente = [];
         for(const reserva of reservas){ 

@@ -1,6 +1,5 @@
 const reservasService = require("../services/reservas.service");
 
-
 async function obtenerReservas(req,res,next){
     try{
         const estado = req.query.estado;
@@ -14,10 +13,27 @@ async function obtenerReservas(req,res,next){
     }catch(err){
         next(err);
     }
-
+}
+async function cambiarEstadoReserva(req,res,next){
+    try{
+        const {id,estado} = req.body;
+        const resultado = await reservasService.cambiarEstadoReserva(id,estado);
+        res.status(200);
+    }catch(err){
+        next(err);
+    }
+}
+async function obtenerTodosClientes(req,res,next){
+    try{
+        const resultado = await reservasService.obtenerTodosClientes();
+        res.json(resultado);
+    }catch(err){
+        next(err);
+    }
 }
 
-
 module.exports = {
-    obtenerReservas
+    obtenerReservas,
+    cambiarEstadoReserva,
+    obtenerTodosClientes
 }

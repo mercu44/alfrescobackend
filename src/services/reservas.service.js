@@ -73,8 +73,18 @@ async function obtenerDatosCliente(id){
         ` 
         SELECT *
         FROM Cliente
-        WHERE id = $1
+        WHERE id = $1;
         `, [id]
+    );
+    return resultado.rows[0];
+}
+
+async function obtenerTodosClientes(){
+    const resultado = await pool.query(
+        ` 
+        SELECT *
+        FROM Cliente;
+        `
     );
     return resultado.rows[0];
 }
@@ -110,6 +120,7 @@ module.exports = {
     insertarCliente,
     obtenerCliente,
     obtenerDatosCliente,
+    obtenerTodosClientes,
     insertarClienteMesaFavorita,
     modificarClienteMesaFavorita
 };

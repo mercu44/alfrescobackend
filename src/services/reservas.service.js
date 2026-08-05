@@ -33,7 +33,46 @@ async function obtenerReservas(estado){
     );
     return resultado.rows;
 }
-
+async function modificarReserva(id,clienteId, mesaId, fecha, horaInicio, horaFin, estado, tipoReserva, personas){
+    const resultado = await pool.query(
+        `
+        UPDATE Reserva
+        SET cliente_id = $2,
+        mesaId = $3,
+        fecha = $4,
+        horaInicio = $5,
+        horaFin = $6, 
+        estado = $7, 
+        tipoReserva = $8,
+        personas = = $9
+        WHERE id = $1
+        `, [id,clienteId, mesaId, fecha, horaInicio, horaFin, estado, tipoReserva, personas]
+    );
+    return resultado.rows[0];
+}
+async function obtenerReservasDia(fecha){
+    const resultado = await pool.query(
+        `
+        SELECT * 
+        FROM Reserva
+        WHERE fecha = $1    
+        `, [fecha]
+    );
+    return resultado.rows[0];
+}
+async function obtenerEstadisticasCliente(id){
+    const resultado = await pool.query(
+        ` 
+        SELECT COUNT (*) as total_reservas,
+        COUNT (*) FILTER( WHERE estado = "cancelada") as canceladas,
+        COUNT (*) FILTER( WHERE estado = "no-show") as no-show
+        FROM Reserva
+        WHERE cliente_id = $1
+        
+        `,[id]
+    );
+    return resultado.rows[0];
+}
 //Cliente
 async function insertarCliente(telefono, prefijo, correo, nombre, nacionalidad, comentarios){
     const resultado = await pool.query(
@@ -117,8 +156,11 @@ module.exports = {
     insertarReserva,
     cambiarEstadoReserva,
     obtenerReservas,
+    obtenerReservasDia,
+    modificarReserva,
     insertarCliente,
     obtenerCliente,
+    obtenerEstadisticasCliente,
     obtenerDatosCliente,
     obtenerTodosClientes,
     insertarClienteMesaFavorita,

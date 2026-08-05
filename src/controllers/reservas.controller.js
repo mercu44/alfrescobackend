@@ -23,6 +23,15 @@ async function cambiarEstadoReserva(req,res,next){
         next(err);
     }
 }
+async function modificarReserva(req,res,next){
+    try{
+        const {id,idCliente,idMesa,fecha, horaInicio, horaFin, estado, tipo, personas} = req.body;
+        const resultado = await reservasService.modificarReserva(id,idCliente,idMesa,fecha, horaInicio, horaFin, estado, tipo, personas);
+        res.status(200);
+    }catch(err){
+        next(err);
+    }
+}
 async function obtenerTodosClientes(req,res,next){
     try{
         const resultado = await reservasService.obtenerTodosClientes();
@@ -35,5 +44,6 @@ async function obtenerTodosClientes(req,res,next){
 module.exports = {
     obtenerReservas,
     cambiarEstadoReserva,
+    modificarReserva,
     obtenerTodosClientes
 }

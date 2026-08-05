@@ -18,7 +18,7 @@ async function cambiarEstadoReserva(req,res,next){
     try{
         const {id,estado} = req.body;
         const resultado = await reservasService.cambiarEstadoReserva(id,estado);
-        res.status(200);
+        res.status(200).json({ ok: true });
     }catch(err){
         next(err);
     }
@@ -27,7 +27,7 @@ async function modificarReserva(req,res,next){
     try{
         const {id,idCliente,idMesa,fecha, horaInicio, horaFin, estado, tipo, personas} = req.body;
         const resultado = await reservasService.modificarReserva(id,idCliente,idMesa,fecha, horaInicio, horaFin, estado, tipo, personas);
-        res.status(200);
+        res.status(200).json({ ok: true });
     }catch(err){
         next(err);
     }

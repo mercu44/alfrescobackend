@@ -38,14 +38,15 @@ async function modificarReserva(id,clienteId, mesaId, fecha, horaInicio, horaFin
         `
         UPDATE Reserva
         SET cliente_id = $2,
-        mesaId = $3,
+        mesa_Id = $3,
         fecha = $4,
-        horaInicio = $5,
-        horaFin = $6, 
+        hora_inicio = $5,
+        hora_fin = $6, 
         estado = $7, 
-        tipoReserva = $8,
-        personas = = $9
+        tipo_reserva = $8,
+        personas =  $9
         WHERE id = $1
+        RETURNING *;
         `, [id,clienteId, mesaId, fecha, horaInicio, horaFin, estado, tipoReserva, personas]
     );
     return resultado.rows[0];

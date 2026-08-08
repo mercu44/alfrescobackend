@@ -38,7 +38,7 @@ async function obtenerReservasDia(fecha){
         `
         SELECT * 
         FROM Reserva
-        WHERE fecha = $1    
+        WHERE fecha = $1;
         `, [fecha]
     );
     return resultado.rows[0];

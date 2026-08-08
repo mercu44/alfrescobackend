@@ -41,7 +41,7 @@ async function obtenerReservasDia(fecha){
         WHERE fecha = $1;
         `, [fecha]
     );
-    return resultado.rows[0];
+    return resultado.rows;
 }
 async function modificarReserva(id,clienteId, mesaId, fecha, horaInicio, horaFin, estado, tipoReserva, personas){
     const resultado = await pool.query(

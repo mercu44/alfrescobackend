@@ -18,6 +18,11 @@ async function obtenerReservasDia(req,res,next){
     try{
         const fecha = req.params.fecha;
         const resultado = await reservasService.obtenerReservasDia(fecha);
+        let reservasYCliente = [];
+        for(const reserva of reservas){ 
+            const cliente = await reservasService.obtenerDatosCliente(reserva.cliente_id);
+            reservasYCliente.push({reserva,cliente});
+        }
         res.status(200).json(resultado);
     }catch(err){
         next(err);

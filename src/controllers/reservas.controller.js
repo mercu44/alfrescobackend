@@ -14,6 +14,17 @@ async function obtenerReservas(req,res,next){
         next(err);
     }
 }
+async function obtenerReservasDia(req,res,next){
+    try{
+        const fecha = req.params.fecha;
+        const resultado = await reservasService.obtenerReservasDia(fecha);
+        res.status(200).json(resultado);
+    }catch(err){
+        next(err);
+    }
+
+
+}
 async function cambiarEstadoReserva(req,res,next){
     try{
         const {id,estado} = req.body;
@@ -43,6 +54,7 @@ async function obtenerTodosClientes(req,res,next){
 
 module.exports = {
     obtenerReservas,
+    obtenerReservasDia,
     cambiarEstadoReserva,
     modificarReserva,
     obtenerTodosClientes

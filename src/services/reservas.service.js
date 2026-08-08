@@ -33,6 +33,16 @@ async function obtenerReservas(estado){
     );
     return resultado.rows;
 }
+async function obtenerReservasDia(fecha){
+    const resultado = await pool.query(
+        `
+        SELECT * 
+        FROM Reserva
+        WHERE fecha = $1    
+        `, [fecha]
+    );
+    return resultado.rows[0];
+}
 async function modificarReserva(id,clienteId, mesaId, fecha, horaInicio, horaFin, estado, tipoReserva, personas){
     const resultado = await pool.query(
         `
@@ -51,16 +61,7 @@ async function modificarReserva(id,clienteId, mesaId, fecha, horaInicio, horaFin
     );
     return resultado.rows[0];
 }
-async function obtenerReservasDia(fecha){
-    const resultado = await pool.query(
-        `
-        SELECT * 
-        FROM Reserva
-        WHERE fecha = $1    
-        `, [fecha]
-    );
-    return resultado.rows[0];
-}
+
 async function obtenerEstadisticasCliente(id){
     const resultado = await pool.query(
         ` 

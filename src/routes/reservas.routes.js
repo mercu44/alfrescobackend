@@ -7,6 +7,7 @@ const router= express.Router();
 router.get("/reservas", reservasController.obtenerReservas);
 router.put("/reservas/cambiarEstadoReserva", reservasController.cambiarEstadoReserva);
 router.put("/reservas/modificarReserva", reservasController.modificarReserva);
+router.get("/reservas/:fecha",reservasController.obtenerReservasDia)
 router.get("/clientes", reservasController.obtenerTodosClientes);
 
 

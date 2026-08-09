@@ -67,8 +67,8 @@ async function obtenerEstadisticasCliente(id){
         ` 
         SELECT COUNT (*) as total_reservas,
         COUNT (*) FILTER( WHERE estado = 'cancelada') as canceladas,
-        COUNT (*) FILTER( WHERE estado = 'no-aparecida') as no-aparecidas,
-        MAX(fecha) FILTER ( WHERE estado = 'hecha') AS ultima-visita
+        COUNT (*) FILTER( WHERE estado = 'no-aparecida') as no_aparecidas,
+        MAX(fecha) FILTER ( WHERE estado = 'hecha') AS ultima_visita
         FROM Reserva
         WHERE cliente_id = $1
         

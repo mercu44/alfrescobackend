@@ -43,6 +43,7 @@ async function modificarReserva(req,res,next){
     try{
         const {id,idCliente,idMesa,fecha, horaInicio, horaFin, estado, tipo, personas} = req.body;
         const resultado = await reservasService.modificarReserva(id,idCliente,idMesa,fecha, horaInicio, horaFin, estado, tipo, personas);
+        console.log("modificarReserva "+ resultado);
         res.status(200).json({ ok: true });
     }catch(err){
         next(err);

@@ -57,11 +57,21 @@ async function obtenerTodosClientes(req,res,next){
         next(err);
     }
 }
+async function obtenerEstadisticasCliente(req,res,next){
+    try{
+        const id = req.params.id;
+        const resultado = await reservasService.obtenerEstadisticasCliente(id);
+        res.json(resultado);
+    }catch(err){
+        next(err);
+    }
+}
 
 module.exports = {
     obtenerReservas,
     obtenerReservasDia,
     cambiarEstadoReserva,
     modificarReserva,
-    obtenerTodosClientes
+    obtenerTodosClientes,
+    obtenerEstadisticasCliente
 }

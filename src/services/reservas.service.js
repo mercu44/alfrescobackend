@@ -66,8 +66,9 @@ async function obtenerEstadisticasCliente(id){
     const resultado = await pool.query(
         ` 
         SELECT COUNT (*) as total_reservas,
-        COUNT (*) FILTER( WHERE estado = "cancelada") as canceladas,
-        COUNT (*) FILTER( WHERE estado = "no-show") as no-show
+        COUNT (*) FILTER( WHERE estado = 'cancelada') as canceladas,
+        COUNT (*) FILTER( WHERE estado = 'no-aparecida') as no-aparecidas,
+        MAX(fecha) FILTER ( WHERE estado = 'hecha') AS ultima-visita
         FROM Reserva
         WHERE cliente_id = $1
         

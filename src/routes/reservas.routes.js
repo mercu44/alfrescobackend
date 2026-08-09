@@ -9,7 +9,7 @@ router.put("/reservas/cambiarEstadoReserva", reservasController.cambiarEstadoRes
 router.put("/reservas/modificarReserva", reservasController.modificarReserva);
 router.get("/reservas/:fecha",reservasController.obtenerReservasDia)
 router.get("/clientes", reservasController.obtenerTodosClientes);
-
+router.get("/clientes/:id", reservasController.obtenerEstadisticasCliente);
 
 
 module.exports = router;

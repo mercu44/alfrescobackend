@@ -150,7 +150,7 @@ async function modificarCliente(id, telefono, prefijo, correo, nombre, nacionali
         score = $7,
         comentarios = $8
         WHERE id = $1
-        RETURNING *:
+        RETURNING *;
         `,[id, telefono, prefijo, correo, nombre, nacionalidad, score, comentarios]
     );
     return resultado.rows[0];

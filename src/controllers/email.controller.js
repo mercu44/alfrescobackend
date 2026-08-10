@@ -19,10 +19,8 @@ async function gestionarCorreo(req,res,next){
 
         const [prefijoNuevo,telefonoNuevo] = telefono.split(" ");
         let cliente = await reservasService.obtenerCliente (telefonoNuevo,prefijoNuevo, email);
-        console.log("obtener cliente bd: ",cliente);
         if( !cliente){
             cliente = await reservasService.insertarCliente(telefonoNuevo,prefijoNuevo,email,nombre, null, '');
-            console.log("despues de isnertar cliente:; ",cliente);
         }
         const token = randomUUID();
         const reserva = await reservasService.insertarReserva(cliente.id, null, fecha, hora, null, 'pendiente', token, 'web', personas, false)

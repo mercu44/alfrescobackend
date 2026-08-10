@@ -43,7 +43,6 @@ async function modificarReserva(req,res,next){
     try{
         const {id,idCliente,idMesa,fecha, horaInicio, horaFin, estado, tipo, personas} = req.body;
         const resultado = await reservasService.modificarReserva(id,idCliente,idMesa,fecha, horaInicio, horaFin, estado, tipo, personas);
-        console.log("modificarReserva "+ resultado);
         res.status(200).json({ ok: true });
     }catch(err){
         next(err);
@@ -59,6 +58,8 @@ async function obtenerTodosClientes(req,res,next){
 }
 async function modificarCliente(req,res,next){
     try{
+        console.log("PARAMS:", req.params);
+        console.log("BODY:", req.body);
         const {telefono, prefijo, correo, nombre, nacionalidad, score, comentarios} = req.body;
         const id = req.params.id;
         const resultado = await reservasService.modificarCliente(id, telefono, prefijo, correo, nombre, nacionalidad, score, comentarios)

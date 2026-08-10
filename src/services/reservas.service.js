@@ -130,7 +130,31 @@ async function obtenerTodosClientes(){
     );
     return resultado.rows[0];
 }
-
+async function eliminarCliente(id){
+    const resultado = await pool.query(`
+        DELETE Cliente
+        WHERE id = $1
+        RETURNING *;
+        `,[id]
+    );
+    return resultado.rows[0];
+}
+async function modificarCliente(id, telefono, prefijo, correo, nombre, nacionalidad, score, comentarios){
+    const resultado = await pool.query(`
+        UPDATE Cliente
+        SET telefono = $2,
+        prefijo = $3,
+        correo = $4,
+        nombre = $5,
+        nacionalidad = $6,
+        score = $7,
+        comentarios = $8
+        WHERE id = $1
+        RETURNING *:
+        `,[id, telefono, prefijo, correo, nombre, nacionalidad, score, comentarios]
+    );
+    return resultado.rows[0];
+}
 //ClienteMesaFavorita
 
 async function insertarClienteMesaFavorita(idCliente, idMesa, prioridad){
@@ -166,6 +190,8 @@ module.exports = {
     obtenerEstadisticasCliente,
     obtenerDatosCliente,
     obtenerTodosClientes,
+    eliminarCliente,
+    modificarCliente,
     insertarClienteMesaFavorita,
     modificarClienteMesaFavorita
 };

@@ -10,6 +10,8 @@ router.put("/reservas/modificarReserva", reservasController.modificarReserva);
 router.get("/reservas/:fecha",reservasController.obtenerReservasDia)
 router.get("/clientes", reservasController.obtenerTodosClientes);
 router.get("/clientes/:id", reservasController.obtenerEstadisticasCliente);
+router.put("/clientes/:id", reservasController.modificarCliente);
+router.delete("/clientes/:id", reservasController.eliminarCliente);
 
 
 module.exports = router;

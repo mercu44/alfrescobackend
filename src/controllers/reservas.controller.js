@@ -57,6 +57,35 @@ async function obtenerTodosClientes(req,res,next){
         next(err);
     }
 }
+async function modificarCliente(req,res,next){
+    try{
+        const {telefono, prefijo, correo, nombre, nacionalidad, score, comentarios} = req.body;
+        const id = req.params.id;
+        const resultado = await reservasService.modificarCliente(id, telefono, prefijo, correo, nombre, nacionalidad, score, comentarios)
+        res.status(200).json({ok:true});
+    }catch(err){
+        next(err);
+    }
+}
+async function eliminarCliente(req,res,next){
+    try{
+        const id = req.params.id;
+        const resultado = await reservasService.eliminarCliente(id);
+        res.status(200).json({ok:true});
+    }catch(err){
+        next(err);
+    }
+}
+/*
+async function modificarCliente(req,res,next){
+    try{
+        const resultado = await reservasService.
+        res.json(resultado);
+    }catch(err){
+        next(err);
+    }
+}
+    */
 async function obtenerEstadisticasCliente(req,res,next){
     try{
         const id = req.params.id;
@@ -73,5 +102,7 @@ module.exports = {
     cambiarEstadoReserva,
     modificarReserva,
     obtenerTodosClientes,
-    obtenerEstadisticasCliente
+    obtenerEstadisticasCliente,
+    modificarCliente,
+    eliminarCliente
 }
